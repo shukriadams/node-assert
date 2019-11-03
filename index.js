@@ -24,5 +24,15 @@ module.exports = {
 
     notNull : function(a, message){
         assert.equal(a === null, false, message);
+    },
+
+    empty : function(a, message){
+        assert.equal(Array.isArray(a), true);
+        assert.equal(a.length, 0, message);
+    },
+
+    single : function(a, message){
+        assert.equal(Array.isArray(a), true);
+        assert.equal(a.length, 1, message);
     }
 };
