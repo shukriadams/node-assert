@@ -2,6 +2,15 @@ let assert = require('assert');
 
 module.exports = {
 
+    throws : async function(callback, message){
+        try {
+            await callback();
+            assert.fail(message);
+        } catch(ex) {
+            return ex;
+        }
+    },
+    
     equal : function(a, b, message){
         assert.equal(a, b, message);
     },
