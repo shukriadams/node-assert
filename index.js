@@ -11,6 +11,10 @@ module.exports = {
         }
     },
     
+    includes : function(a, b, message){
+        assert.equal(a.includes(b), true, message)
+    },
+    
     equal : function(a, b, message){
         assert.equal(a, b, message);
     },
