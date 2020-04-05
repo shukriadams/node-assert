@@ -47,5 +47,14 @@ module.exports = {
     single : function(a, message){
         assert.equal(Array.isArray(a), true);
         assert.equal(a.length, 1, message);
+    },
+     
+        
+    /**
+     * Asserts that an array has the given length.
+     */
+    length : function(array, length, message){
+        assert.equal(Array.isArray(array), true);
+        assert.equal(array.length, length, message);
     }
 };
