@@ -31,6 +31,10 @@ module.exports = {
         assert.equal(a, true, message);
     },
 
+    false : function(a, message){
+        assert.equal(a, false, message);
+    },
+        
     null : function(a, message){
         assert.equal(a, null, message);
     },
