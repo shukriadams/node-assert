@@ -48,6 +48,12 @@ module.exports = {
         assert.equal(a.length, 0, message);
     },
 
+    notEmpty : function(a, message = 'Array is expected to contain items, but found empty.'){
+        assert.equal(!!a, true, 'Array is null')
+        assert.equal(Array.isArray(a), true, 'Argument is not array');
+        assert.equal(a.length > 0, true, message);
+    },
+        
     single : function(a, message){
         assert.equal(Array.isArray(a), true);
         assert.equal(a.length, 1, message);
