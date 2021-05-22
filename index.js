@@ -15,6 +15,10 @@ module.exports = {
         assert.equal(a.includes(b), true, message)
     },
     
+    excludes : function(a, b, message){
+        assert.equal(a.includes(b), false, message)
+    },
+    
     equal : function(a, b, message){
         assert.equal(a, b, message);
     },
