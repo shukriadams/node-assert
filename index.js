@@ -30,7 +30,15 @@ module.exports = {
     zero : function(a, message){
         assert.equal(a, 0, message);
     },
+    
+    gt : function(a, b, message){
+        assert.equal(a > b, true, message);
+    },
 
+    lt : function(a, b, message){
+        assert.equal(a < b, true, message);
+    },
+    
     true : function(a, message){
         assert.equal(a, true, message);
     },
