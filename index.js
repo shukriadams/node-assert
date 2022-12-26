@@ -4,11 +4,12 @@ module.exports = {
 
     throws : async function(callback, message){
         try {
-            await callback();
-            assert.fail(message);
+            await callback()
         } catch(ex) {
-            return ex;
+            return ex
         }
+        
+        assert.fail(message)
     },
     
     includes : function(a, b, message){
